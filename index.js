@@ -10,3 +10,5 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 bot.on("message", (msg) => {
     bot.sendMessage(msg.chat.id, "Ciao, questo è il tuo primo bot telegram!");
 });
+
+console.log("miao")
