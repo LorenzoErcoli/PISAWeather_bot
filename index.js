@@ -7,10 +7,9 @@ const TOKEN = process.env.TOKEN;
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 // Ascolta i messaggi
-module.exports = async function handler(req, res) {
-    bot.on("message", (msg) => {
-        bot.sendMessage(msg.chat.id, "Ciao, questo è il tuo primo bot telegram!");
-    });
-}
+bot.on("message", (msg) => {
+    bot.sendMessage(msg.chat.id, "Ciao, questo è il tuo primo bot telegram!");
+});
+
 
 console.log("miao")
